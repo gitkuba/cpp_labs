@@ -1,0 +1,70 @@
+1.  Napisz program, który wczytuje ze standardowego wejścia dwie liczby (double) i wypisuje ich sumę jeśli obie liczby są mniejsze niż 1000.
+2. Napisz program, który wczytuje Twoją masę (podaną w kg) i wzrost (podany w cm) i na tej podstawie wylicza i wypisuje BMI (czyli m/h2 w kg/m2). Jeśli wyliczona wartość jest mniejsza niż 18.5, program powinien wypisać komunikat: 'BMI ponizej normy'. Jeśli wyliczona wartość jest większa niż 25, program
+powinien wypisać komunikat 'BMI powyzej normy'.
+3. Napisz program wczytujący z klawiatury liczbę całkowitą reprezentującą rok, a następnie wypisujący informację o tym, czy jest to rok przestępny, czy nie. Wskazówka: Operator reszty z dzielenia to %.
+4. Napisz program, który wczyta trzy liczby typu int a następnie sprawdzi czy stanowią one trójkę pitagorejską, to znaczy czy suma kwadratów dwóch mniejszych liczb jest równa kwadratowi liczby największej. Liczby 3, 4 oraz 5 stanowią taką trójkę. W przypadku podania trójki pitagorejskiej należy wyświetlić komunikat: Liczby stanowia trojke pitagorejska., w przeciwnym razie powinien być to komunikat: To nie jest trojka pitagorejska. Uwaga: W programie należy założyć, że użytkownik wpisze liczby w dowolnej
+kolejności, np. 5, 3, 4.
+5. Napisz niewielki kalkulator, który pobiera na wejściu jeden z operatorów arytmetycznych oraz dwa argumenty, po czym wyświetla wynik obliczeń otrzymany na podstawie tych danych.
+6. Przecwicz dzialanie debuggera na kodzie pokazujacym dzialanie instrukcji 'switch' z wideo wprowadzajacego.
+7. Uzupełnij poniższy kod tak, aby wyświetlił liczby parzyste z przedziału [a, b] podanego przez użytkownika programu. 
+
+/* ... */
+int a, b;
+cin >> a >> b;
+for (int i = a; i <= b; ++i) {
+  if (/* ... */) {
+    cout << i << " ";
+  }
+}
+cout << endl;
+/* ... */ 
+
+8.  Uzupełnij poniższy kod tak, aby rezultatem działania programu było obliczenie silni z danej liczby. Załóż, że użytkownik programu poda dodatnią liczbę całkowitą.
+
+#include <iostream>
+using namespace std;
+int silnia(int m) {
+  /* ... */
+}
+int main() {
+  cout << "Podaj dodatnia liczbe calkowita: ";
+  int n;
+  cin >> n;
+  cout << n << "! = " << silnia(n) << endl;
+  return 0;
+}
+
+
+9. Ciąg Fibonacciego to ciąg liczb, w którym pierwszy wyraz jest równy 0, drugi jest równy 1 a każdy następny jest sumą dwóch poprzednich:
+F0 = 0 F1 = 1 Fn = Fn−1 + Fn−2
+Napisz program wyznaczający n-ty wyraz ciągu najpierw przy użyciu funkcji iteracyjnej, a następnie rekurencji. Które podejście jest łatwiejsze?
+
+10. Za pomoca debuggera przesledz dzialanie ponizszego programu. O czym zapomnial programista? Czy program jest przejrzyscie napisany?
+
+#include <iostream>
+using namespace std;
+int i = 5;
+int j;
+
+void do_nothing() {
+  cout << "Not doing anything." << endl;
+}
+
+int foo(int j) {
+  for (i=0; i<j; i++) {
+    do_nothing();
+  }
+  cout << "j in foo: "<< j << endl;
+  return j;
+}
+
+void ineedj(void) {
+  cout << "j is " << j << "\n";
+}
+
+int main() {
+  int j;
+  j = foo(i);
+  ineedj();
+}
+
